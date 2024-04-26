@@ -1,0 +1,184 @@
+/*.press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.kaushan-script-regular {
+  font-family: "Kaushan Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+*/
+
+/* GERAL */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --bg-color: #35281D;
+  --primary-color: #3185FC;
+  --nav-color: #ADBDFF;
+  --destaque-color: #34E5FF;
+  --sombra: #E6E6E6;
+  --buy: #046815;
+  --title-font: "Press Start 2P", system-ui;
+  --font-menu:  "Kaushan Script", cursive;
+}
+
+/*CORPO DA PÁGINA */
+
+body{
+  background-color: var(--bg-color);
+}
+
+/*BARRA DE TOPO */
+
+.navbar{
+  background-color: var(--nav-color);
+  padding: .3rem;
+  max-width: 100%;
+  border-radius: 0 0 1.563rem 1.563rem;
+  box-shadow: 5px 10px 10px var(--sombra);
+}
+
+.contentNavbar{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo{
+  width: 6rem;
+  height: auto;
+  border-radius: 1rem;
+}
+
+/* CONTEUDO DA PÁGINA */
+
+.contentBody{
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-areas: "mainContent sideBar";
+  flex: 1rem 0 auto; 
+}
+
+.mainContent{
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 15px;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  grid-area: mainContent;
+}
+
+.card{
+  max-width: 18rem;
+  height: auto;   
+  background-color: var(--primary-color);
+  border-radius: 1.5rem;
+  box-shadow: .3rem .1rem .4rem var(--sombra);
+}
+
+.img{
+  padding: .4rem;
+  border-radius: 1.5rem;
+}
+
+.card-text{
+  padding: .4rem;
+  color: var(--bg-color);
+  font-size: 1rem;
+  text-align: left;
+}
+
+.card-body{   
+  padding: .2rem;
+  background-color: var(--destaque-color);
+  border-radius: 0 0 1.5rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 200ms ease-in-out;
+}
+.card-body:hover{
+  background-color: var(--buy);
+  color: var(--destaque-color);
+}
+
+.cardLink{
+  margin: 0;
+  color: var(--bg-color);
+  text-decoration: none;
+  font-family: "Press Start 2P", system-ui;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.cardLink:hover{
+  color: var(--destaque-color);
+  transform: scale(1.2);
+  text-shadow: .3rem .1rem .4rem var(--sombra);
+}
+
+
+.sidebar{
+  background-color: var(--nav-color);
+  color:var(--bg-color);
+  padding: 16px;
+  margin-top: 2.5rem;
+  display: flex;
+  border-radius: 25px 0 0 25px;
+  flex-direction: column;
+  align-items: center;
+  min-width: 300px;
+  grid-area: sideBar;
+  gap: 20px;
+}
+
+.listGroup{
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  width: 100%;
+  background-color: var(--primary-color);
+  margin: .5rem;
+  font-family: "Press Start 2P", system-ui;
+  font-size: .5rem;
+  padding: 1rem;
+  border-radius: 30px 1px 10px 30px;  
+}
+
+.itemList{  
+  text-decoration: none;
+  color: var(--bg-color);
+
+}
+
+
+
+/* RODAPÉ */
+
+
+
+/* Responsividade*/
+
+@media(max-width: 610px){
+
+  .contentBody{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+  }
+
+  .sidebar{    
+    min-width: 250px;   
+  }
+
+}
